@@ -23,12 +23,12 @@ namespace app
   {
     std::cout << "Usage: ohmic <option> <value1> <option> <value2>\n"
               << "Options:\n"
-              << "  -v, --volt <val>      Voltage (Volts)\n"
-              << "  -i, --current <val>      Current (Amps)\n"
-              << "  -r, --resistance <val>      Resistance (Ohms)\n"
+              << "  -v, --volt <val>       Voltage (Volts)\n"
+              << "  -i, --current <val>    Current (Amps)\n"
+              << "  -r, --resistance <val> Resistance (Ohms)\n"
               << "  -p, --power <val>      Power (Watts)\n"
-              << "  -h, --help    Show this help menu\n"
-              << "  -V, --version Show version\n"
+              << "  -h, --help             Show this help menu\n"
+              << "  -V, --version          Show version\n"
               << "Example : \n"
               << "  ohm --volt 220 --power 500\n";
   }
