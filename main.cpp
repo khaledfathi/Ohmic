@@ -1,0 +1,31 @@
+/**
+ * @file main.cpp
+ * @brief Ohmic is a Simple CLI tool for calculating Ohm's Law
+ * (Voltage, Current,Resistance, Power).
+ * @author Khaled Fathi <dev@khaledfathi.com>
+ * @date 2026-08-10
+ * @version 1.0.0
+ *
+ * @copyright this porject is open source
+ * Licensed under the GPLv3 License.
+ */
+
+#include "./inc/app.hpp"
+#include "inc/ohm_calc.hpp"
+#include <iostream>
+
+using namespace app;
+
+int main(int argc, char *argv[])
+{
+  // CLI Parser ---
+  Args args;
+  bool cli_status = parseCLI(argc, argv, args);
+  if (!cli_status)
+    return 1;
+  // Calculations ---
+  OhmCalc calc(args.v.value_or(-1), args.i.value_or(-1), args.r.value_or(-1), args.p.value_or(-1));
+  calc.print_result();
+  //
+  return 0;
+}
