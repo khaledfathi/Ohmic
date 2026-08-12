@@ -1,36 +1,49 @@
 # Ohmic Cli Ohm calculator 
 
-![Version](https://img.shields.io/badge/version-v1.0.0-blue) ![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=c%2B%2B) ![GitHub License](https://img.shields.io/github/license/khaledfathi/ohmic)
+![Version](https://img.shields.io/badge/version-v2.0.0-blue) ![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=c%2B%2B) ![GitHub License](https://img.shields.io/github/license/khaledfathi/ohmic)
 
 
 A lightweight CLI tool built in C++17.
 Ohm law calculor ( Voltage , Current , Resistance , Power ).
 
+##  What's New in v2.0.0
+
+rebuild cli parser with CLI11 lib . 
+change options flags .
+
 ### Usage : 
 
 ``` shell
-$ ohmic  --help
-Usage: ohmic <option> <value1> <option> <value2>
-Options:
-  -v, --volt <val>         Voltage (Volts)
-  -i, --current <val>      Current (Amps)
-  -r, --resistance <val>   Resistance (Ohms)
-  -p, --power <val>        Power (Watts)
-  -h, --help               Show this help menu
-  -V, --version            Show version
-Example : 
-  ohm --volt 220 --power 500
+$ ohmic --help 
+Ohmic [ohm calculator (Voltage , Current , Resistance , Power)]
 
+
+ohmic [OPTIONS]
+
+
+OPTIONS:
+  -h,     --help              Print this help message and exit
+  -v,     --version           version of the app
+[Option Group: Electrical Parameters]
+  Provide exactly two values to calculate the remaining two
+  [Exactly 2 of the following options are required]
+  
+
+  OPTIONS:
+    -V,     --voltage FLOAT     voltage value
+    -I,     --current FLOAT     current value in Amps
+    -R,     --resistance FLOAT  resistance value in Ohms
+    -P,     --power FLOAT       power value in Watts
 ```
 
 ### Example 
 
 ``` shell
-$ ohmic  -p 2500 -v 220
-Voltage : 220
-Current : 11.3636
-Resistance : 19.36
-Power : 2500
+$ ohmic -V 220 -P 5400
+Voltage :	220 Volts
+Current :	24.5455 Amps
+Resistance :	8.96296 Ohms
+Power :		5400 Watts
 
 ```
 

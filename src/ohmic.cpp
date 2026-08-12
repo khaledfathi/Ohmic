@@ -21,7 +21,6 @@ namespace ohmic
   {
     argv = app.ensure_utf8(argv);
     // general options
-    app.add_option("-d,--decimals", options.decimal_points, "Number of decimal places in output - default=3 ");
     app.set_version_flag("-v,--version", (std::string)ohmic::info::VERSION, "version of the app ");
     // Create an Option Group for the electrical parameters
     auto *calc_group = app.add_option_group("Electrical Parameters", "Provide exactly two values to calculate the remaining two");
@@ -29,7 +28,7 @@ namespace ohmic
     calc_group->add_option("-V,--voltage", options.voltage, "voltage value");
     calc_group->add_option("-I,--current", options.current, "current value in Amps ");
     calc_group->add_option("-R,--resistance", options.resistance, "resistance value in Ohms");
-    calc_group->add_option("-P,--power", options.voltage, "power value in Watts");
+    calc_group->add_option("-P,--power", options.power, "power value in Watts");
     // exact two options required for calcualtoin
     calc_group->require_option(2);
   }
@@ -47,7 +46,7 @@ namespace ohmic
     std::cout << "Voltage :\t" << results.v << " Volts" << std::endl;
     std::cout << "Current :\t" << results.i << " Amps" << std::endl;
     std::cout << "Resistance :\t" << results.r << " Ohms" << std::endl;
-    std::cout << "Power :\t" << results.p << " Watts" << std::endl;
+    std::cout << "Power :\t\t" << results.p << " Watts" << std::endl;
     return EXIT_SUCCESS;
   }
 
