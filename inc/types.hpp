@@ -26,8 +26,6 @@ namespace app
     std::optional<double> i; // Current (Amps)
     std::optional<double> r; // Resistance (Ohms)
     std::optional<double> p; // Power (Watts)
-    bool help = false;       // -h --help
-    bool version = false;    // -V --version
   };
 
 } // namespace app
