@@ -14,14 +14,14 @@
 
 #include <string_view>
 
-namespace AppInfo
+namespace ohmic::info
 {
-    constexpr std::string_view NAME = "ohmic";
-    constexpr std::string_view VERSION = "1.0.0";
-    constexpr std::string_view AUTHOR = "Khaled Fathi <dev@khaledfathi.com>";
-    constexpr std::string_view DESCRIPTION = "Simple CLI Ohm's law calculator";
-    constexpr std::string_view LICENSE = "GPLv3";
-    constexpr std::string_view GITHUB = "https://github.com/khaledfathi/Ohmic";
-}
+
+    constexpr std::string_view DESCRIPTION = "Ohmic [ohm calculator (Voltage , Current , Resistance , Power)]";
+    constexpr std::string_view VERSION =
+        "Ohmic version :\t2.0.0\nLicense :\tGPLv3\nAuthor :\tKhaled Fathi "
+        "<dev@khaledfathi.com>\nSource "
+        ":\thttps://github.com/khaledfathi/Ohmic";
+} // namespace ohmic::info
 
 #endif // VERSION_HPP

@@ -10,22 +10,23 @@
  * Licensed under the GPLv3 License.
  */
 
-#include "./inc/app.hpp"
-#include "inc/ohm_calc.hpp"
-#include <iostream>
+#include "./inc/ext/CLI11.hpp"
+#include "./inc/ohmic.hpp"
+#include "./inc/version.hpp"
 
-using namespace app;
-
-int main(int argc, char *argv[])
+int run(CLI::App &cli_app)
 {
-  // CLI Parser ---
-  Args args;
-  bool cli_status = parseCLI(argc, argv, args);
-  if (!cli_status)
-    return 1;
-  // Calculations ---
-  OhmCalc calc(args.v.value_or(-1), args.i.value_or(-1), args.r.value_or(-1), args.p.value_or(-1));
-  calc.print_result();
-  //
+  auto volt = cli_app.get_option("-V");
   return 0;
+}
+
+int main(int argc, char **argv)
+{
+  // cli parser
+  CLI::App app{(std::string)ohmic::info::DESCRIPTION};
+  ohmic::options options;
+  ohmic::setCliOptions(app, options, argv);
+  CLI11_PARSE(app, argc, argv);
+  // run app
+  return ohmic::run(options);
 }
