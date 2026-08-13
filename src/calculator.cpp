@@ -3,7 +3,7 @@
  * @brief implementation of OhmCalc
  * @author Khaled Fathi <dev@khaledfathi.com>
  * @date 2026-08-10
- * @version 1.0.0
+ * @version 2.1.0
  *
  * @copyright this porject is open source
  * Licensed under the GPLv3 License.
@@ -11,10 +11,13 @@
 
 #include "../inc/calculator.hpp"
 #include <cmath>
+#include <iostream>
 
-namespace ohmic {
+namespace ohmic
+{
 
-  Calculator::Calculator(double v, double i, double r, double p) {
+  Calculator::Calculator(double v, double i, double r, double p)
+  {
     values.v = v;
     values.i = i;
     values.r = r;
@@ -22,23 +25,35 @@ namespace ohmic {
     calculate();
   }
 
-  void Calculator::calculate() {
-    if (values.v > -1 && values.i > -1) {
+  void Calculator::calculate()
+  {
+    if (values.v > -1 && values.i > -1)
+    {
       values.r = resistance_v_i();
       values.p = power_v_r();
-    } else if (values.v > -1 && values.r > -1) {
+    }
+    else if (values.v > -1 && values.r > -1)
+    {
       values.i = current_v_r();
       values.p = power_v_r();
-    } else if (values.v > -1 && values.p > -1) {
+    }
+    else if (values.v > -1 && values.p > -1)
+    {
       values.i = current_v_p();
       values.r = resistance_v_p();
-    } else if (values.i > -1 && values.r > -1) {
+    }
+    else if (values.i > -1 && values.r > -1)
+    {
       values.v = voltage_i_r();
       values.p = power_i_r();
-    } else if (values.i > -1 && values.p > -1) {
+    }
+    else if (values.i > -1 && values.p > -1)
+    {
       values.v = voltage_i_p();
       values.r = resistance_i_p();
-    } else if (values.r > -1 && values.p > -1) {
+    }
+    else if (values.r > -1 && values.p > -1)
+    {
       values.v = voltage_r_p();
       values.i = current_r_p();
     }

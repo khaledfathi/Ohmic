@@ -3,7 +3,7 @@
  * @brief implementation of core functions of (ohm calculator app [ohmic])
  * @author Khaled Fathi <dev@khaledfathi.com>
  * @date 2026-08-10
- * @version 1.0.0
+ * @version 2.1.0
  *
  * @copyright this porject is open source
  * Licensed under the GPLv3 License.
@@ -14,16 +14,19 @@
 #include "../inc/version.hpp"
 #include <cstdlib>
 #include <iostream>
-
+#include <string>
+//
 namespace ohmic
 {
+
   void setCliOptions(CLI::App &app, ohmic::options &options, char **argv)
   {
     argv = app.ensure_utf8(argv);
     // general options
+    app.add_flag("-H,--human", options.human, "human readable (i.e 1244 Volts , 1.244K Volts )");
     app.set_version_flag("-v,--version", (std::string)ohmic::info::VERSION, "version of the app ");
     // Create an Option Group for the electrical parameters
-    auto *calc_group = app.add_option_group("Electrical Parameters", "Provide exactly two values to calculate the remaining two");
+    auto *calc_group = app.add_option_group( "Electrical Parameters", "Provide exactly two values to calculate the remaining two");
     //
     calc_group->add_option("-V,--voltage", options.voltage, "voltage value");
     calc_group->add_option("-I,--current", options.current, "current value in Amps ");
@@ -33,6 +36,69 @@ namespace ohmic
     calc_group->require_option(2);
   }
 
+  std::string humanReadable(double value, std::string unit, int decimal)
+  {
+    std::string res;
+    if (value >= 1e9)
+    { // over mega
+      res = formatDouble(value / 1e9) + " Giga " + unit;
+    }
+    else if (value >= 1e6 && value < 1e9)
+    {
+      res = formatDouble(value / 1e6) + " Mega " + unit;
+    }
+    else if (value >= 1e3 && value < 1e6)
+    {
+      res = formatDouble(value / 1e3) + " Kilo " + unit;
+    }
+    else if (value >= 1e-3 && value < 1.0)
+    {
+      res = formatDouble(value * 1e3) + " mili " + unit;
+    }
+    else if (value >= 1e-6 && value < 1e-3)
+    {
+      res = formatDouble(value * 1e6) + " micro  " + unit;
+    }
+    else if (value >= 1e-9 && value < 1e-6)
+    {
+      res = formatDouble(value * 1e9) + " nano " + unit;
+    }
+    else
+    {
+      res = formatDouble(value) + " " + unit;
+    }
+    return res;
+  }
+
+  std::string formatDouble(const double val, int decimal)
+  {
+    std::ostringstream stream;
+    stream << std::fixed << std::setprecision(decimal) << val;
+    return stream.str();
+  }
+  double limitToDecimals(double value, int decimals)
+  {
+    double factor = std::pow(10.0, decimals);
+    return std::round(value * factor) / factor;
+  }
+
+  void print_results(ohmic::Calculator::ohmValues &ohm_values, bool isHumanReadable = false)
+  {
+    if (isHumanReadable)
+    {
+      std::cout << "Voltage :\t" << humanReadable(ohm_values.v, "Volts") << std::endl;
+      std::cout << "Current :\t" << humanReadable(ohm_values.i, "Amps") << std::endl;
+      std::cout << "Resistance :\t" << humanReadable(ohm_values.r, "Ohms") << std::endl;
+      std::cout << "Power :\t\t" << humanReadable(ohm_values.p, "Watts") << std::endl;
+    }
+    else
+    {
+      std::cout << "Voltage :\t" << limitToDecimals(ohm_values.v) << " Volts" << std::endl;
+      std::cout << "Current :\t" << limitToDecimals(ohm_values.i) << " Amps" << std::endl;
+      std::cout << "Resistance :\t" << limitToDecimals(ohm_values.r) << " Ohms" << std::endl;
+      std::cout << "Power :\t\t" << limitToDecimals(ohm_values.p) << " Watts" << std::endl;
+    }
+  }
   int run(const ohmic::options &options)
   {
 
@@ -41,12 +107,9 @@ namespace ohmic
     double r = options.resistance.value_or(-1);
     double p = options.power.value_or(-1);
     ohmic::Calculator calc{v, i, r, p};
-
     ohmic::Calculator::ohmValues results = calc.results();
-    std::cout << "Voltage :\t" << results.v << " Volts" << std::endl;
-    std::cout << "Current :\t" << results.i << " Amps" << std::endl;
-    std::cout << "Resistance :\t" << results.r << " Ohms" << std::endl;
-    std::cout << "Power :\t\t" << results.p << " Watts" << std::endl;
+    print_results(results, options.human);
+
     return EXIT_SUCCESS;
   }
 

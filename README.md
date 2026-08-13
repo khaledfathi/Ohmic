@@ -1,20 +1,20 @@
 # Ohmic Cli Ohm calculator 
 
-![Version](https://img.shields.io/badge/version-v2.0.0-blue) ![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=c%2B%2B) ![GitHub License](https://img.shields.io/github/license/khaledfathi/ohmic)
+![Version](https://img.shields.io/badge/version-v2.1.0-blue) ![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=c%2B%2B) ![GitHub License](https://img.shields.io/github/license/khaledfathi/ohmic)
 
 
 A lightweight CLI tool built in C++17.
 Ohm law calculor ( Voltage , Current , Resistance , Power ).
 
-##  What's New in v2.0.0
+##  What's New in v2.1.0
 
-rebuild cli parser with CLI11 lib . 
-change options flags .
+- add -H option for human readable 
+- limit decimal points to 3 
 
 ### Usage : 
 
 ``` shell
-$ ohmic --help 
+$ ohmic --help
 Ohmic [ohm calculator (Voltage , Current , Resistance , Power)]
 
 
@@ -23,6 +23,7 @@ ohmic [OPTIONS]
 
 OPTIONS:
   -h,     --help              Print this help message and exit
+  -H,     --human             human readable (i.e 1244 Volts , 1.244K Volts )
   -v,     --version           version of the app
 [Option Group: Electrical Parameters]
   Provide exactly two values to calculate the remaining two
@@ -39,12 +40,11 @@ OPTIONS:
 ### Example 
 
 ``` shell
-$ ohmic -V 220 -P 5400
-Voltage :	220 Volts
-Current :	24.5455 Amps
-Resistance :	8.96296 Ohms
-Power :		5400 Watts
-
+$ ohmic  -H -V 16000 -I 250
+Voltage :	16.000 Kilo Volts
+Current :	250.000 Amps
+Resistance :	64.000 Ohms
+Power :		4.000 Mega Watts
 ```
 
 ### Compile (Linux) 
