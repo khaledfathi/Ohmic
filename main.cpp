@@ -14,14 +14,7 @@
 #include "./inc/ohmic.hpp"
 #include "./inc/version.hpp"
 
-int run(CLI::App &cli_app)
-{
-  auto volt = cli_app.get_option("-V");
-  return 0;
-}
-
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
   // cli parser
   CLI::App app{(std::string)ohmic::info::DESCRIPTION};
   ohmic::options options;
