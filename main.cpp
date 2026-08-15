@@ -16,7 +16,7 @@
 
 int main(int argc, char **argv) {
   // cli parser
-  CLI::App app{(std::string)ohmic::info::DESCRIPTION};
+  CLI::App app{static_cast<std::string>(ohmic::info::DESCRIPTION)};
   ohmic::options options;
   ohmic::setCliOptions(app, options, argv);
   CLI11_PARSE(app, argc, argv);

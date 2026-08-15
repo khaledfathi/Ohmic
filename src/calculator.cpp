@@ -11,7 +11,6 @@
 
 #include "../inc/calculator.hpp"
 #include <cmath>
-#include <iostream>
 
 namespace ohmic
 {

@@ -24,7 +24,7 @@ namespace ohmic
     argv = app.ensure_utf8(argv);
     // general options
     app.add_flag("-H,--human", options.human, "human readable (i.e 1244 Volts , 1.244K Volts )");
-    app.set_version_flag("-v,--version", (std::string)ohmic::info::VERSION, "version of the app ");
+    app.set_version_flag("-v,--version",static_cast<std::string>(ohmic::info::VERSION), "version of the app ");
     // Create an Option Group for the electrical parameters
     auto *calc_group = app.add_option_group( "Electrical Parameters", "Provide exactly two values to calculate the remaining two");
     //
@@ -41,31 +41,31 @@ namespace ohmic
     std::string res;
     if (value >= 1e9)
     { // over mega
-      res = formatDouble(value / 1e9) + " Giga " + unit;
+      res = formatDouble(value / 1e9, decimal) + " Giga " + unit;
     }
     else if (value >= 1e6 && value < 1e9)
     {
-      res = formatDouble(value / 1e6) + " Mega " + unit;
+      res = formatDouble(value / 1e6, decimal) + " Mega " + unit;
     }
     else if (value >= 1e3 && value < 1e6)
     {
-      res = formatDouble(value / 1e3) + " Kilo " + unit;
+      res = formatDouble(value / 1e3, decimal) + " Kilo " + unit;
     }
     else if (value >= 1e-3 && value < 1.0)
     {
-      res = formatDouble(value * 1e3) + " mili " + unit;
+      res = formatDouble(value * 1e3, decimal) + " mili " + unit;
     }
     else if (value >= 1e-6 && value < 1e-3)
     {
-      res = formatDouble(value * 1e6) + " micro  " + unit;
+      res = formatDouble(value * 1e6, decimal) + " micro  " + unit;
     }
     else if (value >= 1e-9 && value < 1e-6)
     {
-      res = formatDouble(value * 1e9) + " nano " + unit;
+      res = formatDouble(value * 1e9, decimal) + " nano " + unit;
     }
     else
     {
-      res = formatDouble(value) + " " + unit;
+      res = formatDouble(value, decimal) + " " + unit;
     }
     return res;
   }
