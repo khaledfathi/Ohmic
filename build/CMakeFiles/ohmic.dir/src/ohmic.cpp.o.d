@@ -1,7 +1,7 @@
 CMakeFiles/ohmic.dir/src/ohmic.cpp.o: \
- /home/khaled/Documents/Programming/C_C++/ohmic/src/ohmic.cpp \
+ /home/khaled/Documents/Programming/C_CPP/Ohmic/src/ohmic.cpp \
  /usr/include/stdc-predef.h \
- /home/khaled/Documents/Programming/C_C++/ohmic/src/../inc/ohmic.hpp \
+ /home/khaled/Documents/Programming/C_CPP/Ohmic/src/../inc/ohmic.hpp \
  /usr/include/c++/16/optional /usr/include/c++/16/bits/version.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -33,7 +33,7 @@ CMakeFiles/ohmic.dir/src/ohmic.cpp.o: \
  /usr/include/c++/16/debug/assertions.h \
  /usr/include/c++/16/bits/utility.h /usr/include/c++/16/compare \
  /usr/include/c++/16/bits/invoke.h \
- /home/khaled/Documents/Programming/C_C++/ohmic/src/../inc/../inc/ext/CLI11.hpp \
+ /home/khaled/Documents/Programming/C_CPP/Ohmic/src/../inc/../inc/ext/CLI11.hpp \
  /usr/include/c++/16/algorithm /usr/include/c++/16/bits/stl_algobase.h \
  /usr/include/c++/16/bits/cpp_type_traits.h \
  /usr/include/c++/16/ext/type_traits.h \
@@ -234,5 +234,5 @@ CMakeFiles/ohmic.dir/src/ohmic.cpp.o: \
  /usr/include/c++/16/bits/parse_numbers.h \
  /usr/include/c++/16/bits/fs_path.h /usr/include/c++/16/codecvt \
  /usr/include/c++/16/bits/fs_dir.h /usr/include/c++/16/bits/fs_ops.h \
- /home/khaled/Documents/Programming/C_C++/ohmic/src/../inc/calculator.hpp \
- /home/khaled/Documents/Programming/C_C++/ohmic/src/../inc/version.hpp
+ /home/khaled/Documents/Programming/C_CPP/Ohmic/src/../inc/calculator.hpp \
+ /home/khaled/Documents/Programming/C_CPP/Ohmic/src/../inc/version.hpp

@@ -54,10 +54,10 @@ RM = /usr/sbin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/khaled/Documents/Programming/C_C++/ohmic
+CMAKE_SOURCE_DIR = /home/khaled/Documents/Programming/C_CPP/Ohmic
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/khaled/Documents/Programming/C_C++/ohmic/build
+CMAKE_BINARY_DIR = /home/khaled/Documents/Programming/C_CPP/Ohmic/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -85,14 +85,14 @@ clean: CMakeFiles/ohmic.dir/clean
 CMakeFiles/ohmic.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ohmic.dir/build.make CMakeFiles/ohmic.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ohmic.dir/build.make CMakeFiles/ohmic.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/khaled/Documents/Programming/C_C++/ohmic/build/CMakeFiles --progress-num=1,2,3,4 "Built target ohmic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/khaled/Documents/Programming/C_CPP/Ohmic/build/CMakeFiles --progress-num=1,2,3,4 "Built target ohmic"
 .PHONY : CMakeFiles/ohmic.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ohmic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/khaled/Documents/Programming/C_C++/ohmic/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/khaled/Documents/Programming/C_CPP/Ohmic/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ohmic.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/khaled/Documents/Programming/C_C++/ohmic/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/khaled/Documents/Programming/C_CPP/Ohmic/build/CMakeFiles 0
 .PHONY : CMakeFiles/ohmic.dir/rule
 
 # Convenience name for target.
@@ -102,7 +102,7 @@ ohmic: CMakeFiles/ohmic.dir/rule
 # codegen rule for target.
 CMakeFiles/ohmic.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ohmic.dir/build.make CMakeFiles/ohmic.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/khaled/Documents/Programming/C_C++/ohmic/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target ohmic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/khaled/Documents/Programming/C_CPP/Ohmic/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target ohmic"
 .PHONY : CMakeFiles/ohmic.dir/codegen
 
 # clean rule for target.

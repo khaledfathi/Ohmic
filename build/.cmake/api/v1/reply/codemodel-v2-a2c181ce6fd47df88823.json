@@ -40,7 +40,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ohmic::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ohmic-bbae4b8cb01f1678e451.json",
+					"jsonFile" : "target-ohmic-c5cf10091ec29ce180a0.json",
 					"name" : "ohmic",
 					"projectIndex" : 0
 				}
@@ -50,8 +50,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/khaled/Documents/Programming/C_C++/ohmic/build",
-		"source" : "/home/khaled/Documents/Programming/C_C++/ohmic"
+		"build" : "/home/khaled/Documents/Programming/C_CPP/Ohmic/build",
+		"source" : "/home/khaled/Documents/Programming/C_CPP/Ohmic"
 	},
 	"version" : 
 	{

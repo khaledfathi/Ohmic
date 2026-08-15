@@ -1,7 +1,7 @@
 CMakeFiles/ohmic.dir/main.cpp.o: \
- /home/khaled/Documents/Programming/C_C++/ohmic/main.cpp \
+ /home/khaled/Documents/Programming/C_CPP/Ohmic/main.cpp \
  /usr/include/stdc-predef.h \
- /home/khaled/Documents/Programming/C_C++/ohmic/./inc/ext/CLI11.hpp \
+ /home/khaled/Documents/Programming/C_CPP/Ohmic/./inc/ext/CLI11.hpp \
  /usr/include/c++/16/algorithm /usr/include/c++/16/bits/stl_algobase.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -232,5 +232,5 @@ CMakeFiles/ohmic.dir/main.cpp.o: \
  /usr/include/c++/16/bits/parse_numbers.h \
  /usr/include/c++/16/bits/fs_path.h /usr/include/c++/16/codecvt \
  /usr/include/c++/16/bits/fs_dir.h /usr/include/c++/16/bits/fs_ops.h \
- /home/khaled/Documents/Programming/C_C++/ohmic/./inc/ohmic.hpp \
- /home/khaled/Documents/Programming/C_C++/ohmic/./inc/version.hpp
+ /home/khaled/Documents/Programming/C_CPP/Ohmic/./inc/ohmic.hpp \
+ /home/khaled/Documents/Programming/C_CPP/Ohmic/./inc/version.hpp

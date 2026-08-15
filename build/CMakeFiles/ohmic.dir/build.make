@@ -53,10 +53,10 @@ RM = /usr/sbin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/khaled/Documents/Programming/C_C++/ohmic
+CMAKE_SOURCE_DIR = /home/khaled/Documents/Programming/C_CPP/Ohmic
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/khaled/Documents/Programming/C_C++/ohmic/build
+CMAKE_BINARY_DIR = /home/khaled/Documents/Programming/C_CPP/Ohmic/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ohmic.dir/depend.make
@@ -73,46 +73,46 @@ CMakeFiles/ohmic.dir/codegen:
 .PHONY : CMakeFiles/ohmic.dir/codegen
 
 CMakeFiles/ohmic.dir/src/calculator.cpp.o: CMakeFiles/ohmic.dir/flags.make
-CMakeFiles/ohmic.dir/src/calculator.cpp.o: /home/khaled/Documents/Programming/C_C++/ohmic/src/calculator.cpp
+CMakeFiles/ohmic.dir/src/calculator.cpp.o: /home/khaled/Documents/Programming/C_CPP/Ohmic/src/calculator.cpp
 CMakeFiles/ohmic.dir/src/calculator.cpp.o: CMakeFiles/ohmic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/khaled/Documents/Programming/C_C++/ohmic/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ohmic.dir/src/calculator.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ohmic.dir/src/calculator.cpp.o -MF CMakeFiles/ohmic.dir/src/calculator.cpp.o.d -o CMakeFiles/ohmic.dir/src/calculator.cpp.o -c /home/khaled/Documents/Programming/C_C++/ohmic/src/calculator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/khaled/Documents/Programming/C_CPP/Ohmic/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ohmic.dir/src/calculator.cpp.o"
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ohmic.dir/src/calculator.cpp.o -MF CMakeFiles/ohmic.dir/src/calculator.cpp.o.d -o CMakeFiles/ohmic.dir/src/calculator.cpp.o -c /home/khaled/Documents/Programming/C_CPP/Ohmic/src/calculator.cpp
 
 CMakeFiles/ohmic.dir/src/calculator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ohmic.dir/src/calculator.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/khaled/Documents/Programming/C_C++/ohmic/src/calculator.cpp > CMakeFiles/ohmic.dir/src/calculator.cpp.i
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/khaled/Documents/Programming/C_CPP/Ohmic/src/calculator.cpp > CMakeFiles/ohmic.dir/src/calculator.cpp.i
 
 CMakeFiles/ohmic.dir/src/calculator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ohmic.dir/src/calculator.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/khaled/Documents/Programming/C_C++/ohmic/src/calculator.cpp -o CMakeFiles/ohmic.dir/src/calculator.cpp.s
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/khaled/Documents/Programming/C_CPP/Ohmic/src/calculator.cpp -o CMakeFiles/ohmic.dir/src/calculator.cpp.s
 
 CMakeFiles/ohmic.dir/src/ohmic.cpp.o: CMakeFiles/ohmic.dir/flags.make
-CMakeFiles/ohmic.dir/src/ohmic.cpp.o: /home/khaled/Documents/Programming/C_C++/ohmic/src/ohmic.cpp
+CMakeFiles/ohmic.dir/src/ohmic.cpp.o: /home/khaled/Documents/Programming/C_CPP/Ohmic/src/ohmic.cpp
 CMakeFiles/ohmic.dir/src/ohmic.cpp.o: CMakeFiles/ohmic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/khaled/Documents/Programming/C_C++/ohmic/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ohmic.dir/src/ohmic.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ohmic.dir/src/ohmic.cpp.o -MF CMakeFiles/ohmic.dir/src/ohmic.cpp.o.d -o CMakeFiles/ohmic.dir/src/ohmic.cpp.o -c /home/khaled/Documents/Programming/C_C++/ohmic/src/ohmic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/khaled/Documents/Programming/C_CPP/Ohmic/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ohmic.dir/src/ohmic.cpp.o"
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ohmic.dir/src/ohmic.cpp.o -MF CMakeFiles/ohmic.dir/src/ohmic.cpp.o.d -o CMakeFiles/ohmic.dir/src/ohmic.cpp.o -c /home/khaled/Documents/Programming/C_CPP/Ohmic/src/ohmic.cpp
 
 CMakeFiles/ohmic.dir/src/ohmic.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ohmic.dir/src/ohmic.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/khaled/Documents/Programming/C_C++/ohmic/src/ohmic.cpp > CMakeFiles/ohmic.dir/src/ohmic.cpp.i
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/khaled/Documents/Programming/C_CPP/Ohmic/src/ohmic.cpp > CMakeFiles/ohmic.dir/src/ohmic.cpp.i
 
 CMakeFiles/ohmic.dir/src/ohmic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ohmic.dir/src/ohmic.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/khaled/Documents/Programming/C_C++/ohmic/src/ohmic.cpp -o CMakeFiles/ohmic.dir/src/ohmic.cpp.s
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/khaled/Documents/Programming/C_CPP/Ohmic/src/ohmic.cpp -o CMakeFiles/ohmic.dir/src/ohmic.cpp.s
 
 CMakeFiles/ohmic.dir/main.cpp.o: CMakeFiles/ohmic.dir/flags.make
-CMakeFiles/ohmic.dir/main.cpp.o: /home/khaled/Documents/Programming/C_C++/ohmic/main.cpp
+CMakeFiles/ohmic.dir/main.cpp.o: /home/khaled/Documents/Programming/C_CPP/Ohmic/main.cpp
 CMakeFiles/ohmic.dir/main.cpp.o: CMakeFiles/ohmic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/khaled/Documents/Programming/C_C++/ohmic/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ohmic.dir/main.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ohmic.dir/main.cpp.o -MF CMakeFiles/ohmic.dir/main.cpp.o.d -o CMakeFiles/ohmic.dir/main.cpp.o -c /home/khaled/Documents/Programming/C_C++/ohmic/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/khaled/Documents/Programming/C_CPP/Ohmic/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ohmic.dir/main.cpp.o"
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ohmic.dir/main.cpp.o -MF CMakeFiles/ohmic.dir/main.cpp.o.d -o CMakeFiles/ohmic.dir/main.cpp.o -c /home/khaled/Documents/Programming/C_CPP/Ohmic/main.cpp
 
 CMakeFiles/ohmic.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ohmic.dir/main.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/khaled/Documents/Programming/C_C++/ohmic/main.cpp > CMakeFiles/ohmic.dir/main.cpp.i
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/khaled/Documents/Programming/C_CPP/Ohmic/main.cpp > CMakeFiles/ohmic.dir/main.cpp.i
 
 CMakeFiles/ohmic.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ohmic.dir/main.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/khaled/Documents/Programming/C_C++/ohmic/main.cpp -o CMakeFiles/ohmic.dir/main.cpp.s
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/khaled/Documents/Programming/C_CPP/Ohmic/main.cpp -o CMakeFiles/ohmic.dir/main.cpp.s
 
 # Object files for target ohmic
 ohmic_OBJECTS = \
@@ -129,7 +129,7 @@ ohmic: CMakeFiles/ohmic.dir/main.cpp.o
 ohmic: CMakeFiles/ohmic.dir/build.make
 ohmic: CMakeFiles/ohmic.dir/compiler_depend.ts
 ohmic: CMakeFiles/ohmic.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/khaled/Documents/Programming/C_C++/ohmic/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ohmic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/khaled/Documents/Programming/C_CPP/Ohmic/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ohmic"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ohmic.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -141,6 +141,6 @@ CMakeFiles/ohmic.dir/clean:
 .PHONY : CMakeFiles/ohmic.dir/clean
 
 CMakeFiles/ohmic.dir/depend:
-	cd /home/khaled/Documents/Programming/C_C++/ohmic/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/khaled/Documents/Programming/C_C++/ohmic /home/khaled/Documents/Programming/C_C++/ohmic /home/khaled/Documents/Programming/C_C++/ohmic/build /home/khaled/Documents/Programming/C_C++/ohmic/build /home/khaled/Documents/Programming/C_C++/ohmic/build/CMakeFiles/ohmic.dir/DependInfo.cmake "--color=$(COLOR)" ohmic
+	cd /home/khaled/Documents/Programming/C_CPP/Ohmic/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/khaled/Documents/Programming/C_CPP/Ohmic /home/khaled/Documents/Programming/C_CPP/Ohmic /home/khaled/Documents/Programming/C_CPP/Ohmic/build /home/khaled/Documents/Programming/C_CPP/Ohmic/build /home/khaled/Documents/Programming/C_CPP/Ohmic/build/CMakeFiles/ohmic.dir/DependInfo.cmake "--color=$(COLOR)" ohmic
 .PHONY : CMakeFiles/ohmic.dir/depend
 

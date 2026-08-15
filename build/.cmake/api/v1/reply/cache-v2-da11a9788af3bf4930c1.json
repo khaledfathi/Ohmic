@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/khaled/Documents/Programming/C_C++/ohmic/build"
+			"value" : "/home/khaled/Documents/Programming/C_CPP/Ohmic/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -583,7 +583,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/khaled/Documents/Programming/C_C++/ohmic/build/CMakeFiles/pkgRedirects"
+			"value" : "/home/khaled/Documents/Programming/C_CPP/Ohmic/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -643,7 +643,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/khaled/Documents/Programming/C_C++/ohmic"
+			"value" : "/home/khaled/Documents/Programming/C_CPP/Ohmic"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1243,7 +1243,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/khaled/Documents/Programming/C_C++/ohmic/build"
+			"value" : "/home/khaled/Documents/Programming/C_CPP/Ohmic/build"
 		},
 		{
 			"name" : "ohmic_IS_TOP_LEVEL",
@@ -1267,7 +1267,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/khaled/Documents/Programming/C_C++/ohmic"
+			"value" : "/home/khaled/Documents/Programming/C_CPP/Ohmic"
 		}
 	],
 	"kind" : "cache",

@@ -4,7 +4,7 @@
 # compile CXX with /usr/sbin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/khaled/Documents/Programming/C_C++/ohmic/inc
+CXX_INCLUDES = -I/home/khaled/Documents/Programming/C_CPP/Ohmic/inc
 
 CXX_FLAGS = -std=c++23 -Wall -Wextra -Wpedantic
 

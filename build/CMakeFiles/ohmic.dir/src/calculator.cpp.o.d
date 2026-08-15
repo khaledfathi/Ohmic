@@ -1,7 +1,7 @@
 CMakeFiles/ohmic.dir/src/calculator.cpp.o: \
- /home/khaled/Documents/Programming/C_C++/ohmic/src/calculator.cpp \
+ /home/khaled/Documents/Programming/C_CPP/Ohmic/src/calculator.cpp \
  /usr/include/stdc-predef.h \
- /home/khaled/Documents/Programming/C_C++/ohmic/src/../inc/calculator.hpp \
+ /home/khaled/Documents/Programming/C_CPP/Ohmic/src/../inc/calculator.hpp \
  /usr/include/c++/16/cmath /usr/include/c++/16/bits/requires_hosted.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/os_defines.h \
