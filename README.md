@@ -1,6 +1,6 @@
 # Ohmic Cli Ohm calculator 
 
-![Version](https://img.shields.io/badge/version-v2.1.1-blue) ![C++23](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=c%2B%2B) ![GitHub License](https://img.shields.io/github/license/khaledfathi/ohmic)
+![Version](https://img.shields.io/badge/version-v2.1.1-blue) ![C++23](https://img.shields.io/badge/C%2B%2B-23-00599C?logo=c%2B%2B) ![GitHub License](https://img.shields.io/github/license/khaledfathi/ohmic)
 
 
 A lightweight CLI tool built in C++17.
