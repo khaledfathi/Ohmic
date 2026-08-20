@@ -13,8 +13,7 @@
 #include "../inc/calculator.hpp"
 #include "../inc/version.hpp"
 #include <cstdlib>
-#include <iostream>
-#include <string>
+#include <print>
 //
 namespace ohmic
 {
@@ -86,17 +85,17 @@ namespace ohmic
   {
     if (isHumanReadable)
     {
-      std::cout << "Voltage :\t" << humanReadable(ohm_values.v, "Volts") << std::endl;
-      std::cout << "Current :\t" << humanReadable(ohm_values.i, "Amps") << std::endl;
-      std::cout << "Resistance :\t" << humanReadable(ohm_values.r, "Ohms") << std::endl;
-      std::cout << "Power :\t\t" << humanReadable(ohm_values.p, "Watts") << std::endl;
+      std::print("Voltage :\t {} \n" ,humanReadable(ohm_values.v, "Volts") );
+      std::print("Current :\t {} \n" ,humanReadable(ohm_values.i, "Amps") );
+      std::print("Resistance : \t {} \n" ,humanReadable(ohm_values.r, "Ohms") );
+      std::print("Power:\t\t {} \n" ,humanReadable(ohm_values.p, "Watts") );
     }
     else
     {
-      std::cout << "Voltage :\t" << limitToDecimals(ohm_values.v) << " Volts" << std::endl;
-      std::cout << "Current :\t" << limitToDecimals(ohm_values.i) << " Amps" << std::endl;
-      std::cout << "Resistance :\t" << limitToDecimals(ohm_values.r) << " Ohms" << std::endl;
-      std::cout << "Power :\t\t" << limitToDecimals(ohm_values.p) << " Watts" << std::endl;
+      std::print("Voltage :\t {} Volts\n" ,limitToDecimals(ohm_values.v) );
+      std::print("Current :\t Amps{} \n" ,limitToDecimals(ohm_values.i) );
+      std::print("Resistance : \t Ohms{} \n" ,limitToDecimals(ohm_values.r) );
+      std::print("Power:\t\t Watts{} \n" ,limitToDecimals(ohm_values.p) );
     }
   }
   int run(const ohmic::options &options)
