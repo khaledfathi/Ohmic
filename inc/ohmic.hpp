@@ -3,13 +3,14 @@
  * @brief header of core functions of (ohm calculator app [ohmic])
  * @author Khaled Fathi <dev@khaledfathi.com>
  * @date 2026-08-10
- * @version 2.1.0
+ * @version 2.1.1
  *
- * @copyright this porject is open source
+ * @copyright this project is open source
  * Licensed under the GPLv3 License.
  */
 
 #include <optional>
+#include <string_view>
 #ifndef OHMIC_HPP
 
 #include "../inc/ext/CLI11.hpp"
@@ -48,7 +49,7 @@ namespace ohmic
    * @param decimal [in] limits  results  decimal (i.e 1.23455  => limits 2 point =  1.235)
    * @return string of human readable format
    */
-  std::string humanReadable(double value, std::string unit, int decimal = 3);
+  std::string humanReadable(double value, std::string_view unit, int decimal = 3);
 
   // 
   /**

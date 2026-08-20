@@ -4,9 +4,9 @@
  * (Voltage, Current,Resistance, Power).
  * @author Khaled Fathi <dev@khaledfathi.com>
  * @date 2026-08-10
- * @version 1.0.0
+ * @version 2.1.1
  *
- * @copyright this porject is open source
+ * @copyright this project is open source
  * Licensed under the GPLv3 License.
  */
 
@@ -14,19 +14,14 @@
 #include "./inc/ohmic.hpp"
 #include "./inc/version.hpp"
 
-int run(CLI::App &cli_app)
-{
-  auto volt = cli_app.get_option("-V");
-  return 0;
-}
-
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
   // cli parser
-  CLI::App app{(std::string)ohmic::info::DESCRIPTION};
+  CLI::App app{std::string{ohmic::info::DESCRIPTION}};
   ohmic::options options;
+
   ohmic::setCliOptions(app, options, argv);
   CLI11_PARSE(app, argc, argv);
-  // run app
+  //
+  // Run app logic
   return ohmic::run(options);
 }
