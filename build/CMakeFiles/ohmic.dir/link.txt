@@ -1,1 +1,0 @@
-/usr/sbin/c++ -Wl,--dependency-file=CMakeFiles/ohmic.dir/link.d CMakeFiles/ohmic.dir/src/calculator.cpp.o CMakeFiles/ohmic.dir/src/ohmic.cpp.o CMakeFiles/ohmic.dir/main.cpp.o -o ohmic

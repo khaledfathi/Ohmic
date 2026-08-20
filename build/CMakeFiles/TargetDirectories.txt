@@ -1,3 +1,0 @@
-/home/khaled/Documents/Programming/C_CPP/Ohmic/build/CMakeFiles/ohmic.dir
-/home/khaled/Documents/Programming/C_CPP/Ohmic/build/CMakeFiles/edit_cache.dir
-/home/khaled/Documents/Programming/C_CPP/Ohmic/build/CMakeFiles/rebuild_cache.dir
