@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/badge/version-v2.1.1-blue) ![C++23](https://img.shields.io/badge/C%2B%2B-23-00599C?logo=c%2B%2B) ![GitHub License](https://img.shields.io/github/license/khaledfathi/ohmic)
 
 
-A lightweight CLI tool built in C++17.
+A lightweight CLI tool built in C++23.
 Ohm law calculor ( Voltage , Current , Resistance , Power ).
 
 ##  What's New in v2.1.1
@@ -48,7 +48,7 @@ Power :		4.000 Mega Watts
 
 ### Compile (Linux) 
 ```shell
-g++ -std=c++17 -Os -flto -s -fdata-sections -ffunction-sections -Wl,--gc-sections ./src/*.cpp main.cpp -o ./build/bin/ohmic
+g++ -std=c++23 -Os -flto -s -fdata-sections -ffunction-sections -Wl,--gc-sections ./src/*.cpp main.cpp -o ./build/bin/ohmic
 sudo cp ./build/bin/ohmic /usr/local/bin/ohmic
 sudo chmod +x /usr/local/bin/ohmic
 ```
