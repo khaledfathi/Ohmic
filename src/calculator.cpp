@@ -3,9 +3,9 @@
  * @brief implementation of OhmCalc
  * @author Khaled Fathi <dev@khaledfathi.com>
  * @date 2026-08-10
- * @version 2.1.0
+ * @version 2.1.1
  *
- * @copyright this porject is open source
+ * @copyright this project is open source
  * Licensed under the GPLv3 License.
  */
 
@@ -15,12 +15,8 @@
 namespace ohmic
 {
 
-  Calculator::Calculator(double v, double i, double r, double p)
+  Calculator::Calculator(double v, double i, double r, double p):values{v,i,r,p}
   {
-    values.v = v;
-    values.i = i;
-    values.r = r;
-    values.p = p;
     calculate();
   }
 

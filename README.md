@@ -1,15 +1,14 @@
 # Ohmic Cli Ohm calculator 
 
-![Version](https://img.shields.io/badge/version-v2.1.0-blue) ![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=c%2B%2B) ![GitHub License](https://img.shields.io/github/license/khaledfathi/ohmic)
+![Version](https://img.shields.io/badge/version-v2.1.1-blue) ![C++23](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=c%2B%2B) ![GitHub License](https://img.shields.io/github/license/khaledfathi/ohmic)
 
 
 A lightweight CLI tool built in C++17.
 Ohm law calculor ( Voltage , Current , Resistance , Power ).
 
-##  What's New in v2.1.0
+##  What's New in v2.1.1
 
-- add -H option for human readable 
-- limit decimal points to 3 
+- follow newer C++ modern standard (c++ 23) .
 
 ### Usage : 
 
@@ -53,4 +52,3 @@ g++ -std=c++17 -Os -flto -s -fdata-sections -ffunction-sections -Wl,--gc-section
 sudo cp ./build/bin/ohmic /usr/local/bin/ohmic
 sudo chmod +x /usr/local/bin/ohmic
 ```
-or download the **[bin file](https://github.com/khaledfathi/Ohmic/raw/refs/heads/main/build/bin/ohmic)**

@@ -4,9 +4,9 @@
  * Equations"
  * @author Khaled Fathi <dev@khaledfathi.com>
  * @date 2026-08-10
- * @version 2.1.0
+ * @version 2.1.1
  *
- * @copyright this porject is open source
+ * @copyright this project is open source
  * Licensed under the GPLv3 License.
  */
 #ifndef OHM_CALC_HPP

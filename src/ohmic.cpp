@@ -3,9 +3,9 @@
  * @brief implementation of core functions of (ohm calculator app [ohmic])
  * @author Khaled Fathi <dev@khaledfathi.com>
  * @date 2026-08-10
- * @version 2.1.0
+ * @version 2.1.1
  *
- * @copyright this porject is open source
+ * @copyright this project is open source
  * Licensed under the GPLv3 License.
  */
 
@@ -13,6 +13,10 @@
 #include "../inc/calculator.hpp"
 #include "../inc/version.hpp"
 #include <cstdlib>
+#include <cmath>
+#include <string>
+#include <string_view>
+#include <format>
 #include <print>
 //
 namespace ohmic
@@ -35,45 +39,29 @@ namespace ohmic
     calc_group->require_option(2);
   }
 
-  std::string humanReadable(double value, std::string unit, int decimal)
+  std::string humanReadable(double value, std::string_view unit, int decimal)
   {
-    std::string res;
     if (value >= 1e9)
-    { // over mega
-      res = formatDouble(value / 1e9, decimal) + " Giga " + unit;
-    }
-    else if (value >= 1e6 && value < 1e9)
-    {
-      res = formatDouble(value / 1e6, decimal) + " Mega " + unit;
-    }
-    else if (value >= 1e3 && value < 1e6)
-    {
-      res = formatDouble(value / 1e3, decimal) + " Kilo " + unit;
-    }
-    else if (value >= 1e-3 && value < 1.0)
-    {
-      res = formatDouble(value * 1e3, decimal) + " mili " + unit;
-    }
-    else if (value >= 1e-6 && value < 1e-3)
-    {
-      res = formatDouble(value * 1e6, decimal) + " micro  " + unit;
-    }
-    else if (value >= 1e-9 && value < 1e-6)
-    {
-      res = formatDouble(value * 1e9, decimal) + " nano " + unit;
-    }
-    else
-    {
-      res = formatDouble(value, decimal) + " " + unit;
-    }
-    return res;
+      return std::format("{} Giga {}", formatDouble(value / 1e9, decimal), unit);
+    if (value >= 1e6)
+      return std::format("{} Mega {}", formatDouble(value / 1e6, decimal), unit);
+    if (value >= 1e3)
+      return std::format("{} Kilo {}", formatDouble(value / 1e3, decimal), unit);
+    if (value >= 1.0)
+      return std::format("{} {}", formatDouble(value, decimal), unit);
+    if (value >= 1e-3)
+      return std::format("{} mili {}", formatDouble(value * 1e3, decimal), unit);
+    if (value >= 1e-6)
+      return std::format("{} micro {}", formatDouble(value * 1e6, decimal), unit);
+    if (value >= 1e-9)
+      return std::format("{} nano {}", formatDouble(value * 1e9, decimal), unit);
+
+    return std::format("{} {}", formatDouble(value, decimal), unit);
   }
 
   std::string formatDouble(const double val, int decimal)
   {
-    std::ostringstream stream;
-    stream << std::fixed << std::setprecision(decimal) << val;
-    return stream.str();
+    return std::format("{:.{}f}", val, decimal);
   }
   double limitToDecimals(double value, int decimals)
   {
@@ -85,17 +73,17 @@ namespace ohmic
   {
     if (isHumanReadable)
     {
-      std::print("Voltage :\t {} \n" ,humanReadable(ohm_values.v, "Volts") );
-      std::print("Current :\t {} \n" ,humanReadable(ohm_values.i, "Amps") );
-      std::print("Resistance : \t {} \n" ,humanReadable(ohm_values.r, "Ohms") );
-      std::print("Power:\t\t {} \n" ,humanReadable(ohm_values.p, "Watts") );
+      std::println("Voltage :    {} " ,humanReadable(ohm_values.v, "Volts") );
+      std::println("Current :    {} " ,humanReadable(ohm_values.i, "Amps") );
+      std::println("Resistance : {} " ,humanReadable(ohm_values.r, "Ohms") );
+      std::println("Power:       {}" ,humanReadable(ohm_values.p, "Watts") );
     }
     else
     {
-      std::print("Voltage :\t {} Volts\n" ,limitToDecimals(ohm_values.v) );
-      std::print("Current :\t Amps{} \n" ,limitToDecimals(ohm_values.i) );
-      std::print("Resistance : \t Ohms{} \n" ,limitToDecimals(ohm_values.r) );
-      std::print("Power:\t\t Watts{} \n" ,limitToDecimals(ohm_values.p) );
+      std::println("Voltage :    {:.2f} Volts" ,ohm_values.v );
+      std::println("Current :    {:.2f} Amps " ,ohm_values.i );
+      std::println("Resistance : {:.2f} Ohms " ,ohm_values.r );
+      std::println("Power:       {:.2f} Watts " ,ohm_values.p );
     }
   }
   int run(const ohmic::options &options)
@@ -105,8 +93,10 @@ namespace ohmic
     double i = options.current.value_or(-1);
     double r = options.resistance.value_or(-1);
     double p = options.power.value_or(-1);
+
     ohmic::Calculator calc{v, i, r, p};
     ohmic::Calculator::ohmValues results = calc.results();
+
     print_results(results, options.human);
 
     return EXIT_SUCCESS;
